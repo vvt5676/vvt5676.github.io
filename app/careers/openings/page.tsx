@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Briefcase } from "lucide-react"
@@ -34,13 +36,12 @@ export default function OpeningsPage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[400px]">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900 to-blue-600">
-          <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
-        </div>
-        <div className="relative h-full flex items-center">
+      <div className="relative h-[250px] bg-gradient-to-r from-blue-900 to-blue-600">
+        <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
+        <div className="relative h-full flex items-center justify-start">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-white">
+              <Briefcase className="w-16 h-16 mb-4" />
               <h1 className="text-4xl font-bold mb-4">{typewriterText}</h1>
               <p className="text-xl max-w-2xl">Explore opportunities to grow with us</p>
             </div>
@@ -76,7 +77,7 @@ export default function OpeningsPage() {
                     </div>
                   </div>
                   <Link href="/careers">
-                    <Button variant="outline">Apply Now</Button>
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white">Apply Now</Button>
                   </Link>
                 </div>
               </CardContent>

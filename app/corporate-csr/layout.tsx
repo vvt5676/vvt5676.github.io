@@ -1,8 +1,9 @@
-import Link from "next/link"
+import { SidebarNav } from "@/components/ui/sidebar"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import type React from "react"
 
-const tabs = [
+const sidebarNavItems = [
   { name: "Overview", href: "/corporate-csr" },
   { name: "Annual Day", href: "/corporate-csr/annual-day" },
   { name: "Blood Donation", href: "/corporate-csr/blood-donation" },
@@ -15,27 +16,22 @@ export default function CSRLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Header />
-      <div className="flex">
+      <main className="flex">
         {/* Side Navigation */}
-        <div className="w-64 bg-slate-50 p-6 border-r min-h-[calc(100vh-5rem)]">
-          <nav className="space-y-2">
-            {tabs.map((tab) => (
-              <Link
-                key={tab.name}
-                href={tab.href}
-                className="block px-4 py-2 rounded-lg text-blue-900 hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                {tab.name}
-              </Link>
-            ))}
-          </nav>
+        <div className="w-64 min-h-[calc(100vh-5rem)] bg-white border-r">
+          <div className="p-6">
+            <h2 className="text-xl font-semibold text-blue-900 mb-4">Corporate CSR</h2>
+            <SidebarNav items={sidebarNavItems} />
+          </div>
         </div>
 
         {/* Main Content */}
-        <div className="flex-1">{children}</div>
-      </div>
+        <div className="flex-1">
+          <div className="p-6">{children}</div>
+        </div>
+      </main>
       <Footer />
     </div>
   )

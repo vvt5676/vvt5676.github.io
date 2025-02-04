@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { Users } from "lucide-react"
 import { useTypewriter } from "../../hooks/useTypewriter"
@@ -20,16 +22,9 @@ export default function EndUsersPage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[400px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(https://sjc.microlink.io/6bRK62hr0qaw3a3xCynLxrALLYp2xJuAr9-1wwF1LpE251hM7EY3VaaRX9LpQNsaCQZ3_Fi-18thOpL8y5b01w.jpeg)`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-600/80" />
-        </div>
-        <div className="relative h-full flex items-center">
+      <div className="relative h-[250px] bg-gradient-to-r from-blue-900 to-blue-600">
+        <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
+        <div className="relative h-full flex items-center justify-start">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-white">
               <Users className="w-16 h-16 mb-4" />

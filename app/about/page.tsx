@@ -1,33 +1,37 @@
-"use client"
-
 import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, Heart, Users } from "lucide-react"
+import { Building, Users, Clock, Award } from "lucide-react"
 import Link from "next/link"
 import { useTypewriter } from "../hooks/useTypewriter"
 
 const sections = [
   {
-    title: "Annual Day",
-    description: "Celebrating our employees and their achievements",
-    icon: Calendar,
-    href: "/corporate-csr/annual-day",
+    title: "The Company",
+    description: "Learn about our history, vision, and values",
+    icon: Building,
+    href: "/about/company",
   },
   {
-    title: "Blood Donation",
-    description: "Contributing to community health through regular blood donation drives",
-    icon: Heart,
-    href: "/corporate-csr/blood-donation",
-  },
-  {
-    title: "Community Initiatives",
-    description: "Making a positive impact in our local community",
+    title: "Our People",
+    description: "Meet the team behind our success",
     icon: Users,
-    href: "/corporate-csr/community",
+    href: "/about/people",
+  },
+  {
+    title: "Our History",
+    description: "Explore our journey through the years",
+    icon: Clock,
+    href: "/about/history",
+  },
+  {
+    title: "Certifications",
+    description: "View our quality and industry certifications",
+    icon: Award,
+    href: "/about/certifications",
   },
 ]
 
-export default function CorporateCSRPage() {
-  const typewriterText = useTypewriter("Corporate CSR", 50)
+export default function AboutPage() {
+  const typewriterText = useTypewriter("About Us", 50)
 
   return (
     <div>
@@ -38,7 +42,9 @@ export default function CorporateCSRPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-white">
               <h1 className="text-4xl font-bold mb-4">{typewriterText}</h1>
-              <p className="text-xl max-w-2xl">Our commitment to social responsibility and community development</p>
+              <p className="text-xl max-w-2xl">
+                Learn about our company, our people, our history, and our certifications
+              </p>
             </div>
           </div>
         </div>
@@ -46,7 +52,7 @@ export default function CorporateCSRPage() {
 
       {/* Content Section */}
       <div className="max-w-6xl mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {sections.map((section) => (
             <Link key={section.title} href={section.href}>
               <Card className="h-full hover:shadow-lg transition-shadow">

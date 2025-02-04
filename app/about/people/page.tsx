@@ -1,5 +1,9 @@
+"use client"
+
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import { Users } from "lucide-react"
+import { useTypewriter } from "../../hooks/useTypewriter"
 
 const team = [
   {
@@ -12,20 +16,21 @@ const team = [
 ]
 
 export default function PeoplePage() {
+  const typewriterText = useTypewriter("Our People", 50)
+
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[200px] md:h-[300px] lg:h-[400px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(https://sjc.microlink.io/0jI_iL_YMUjLZA0VYJlngXIiW3PITDjsKDHVlLlhKtv1XjbPEe3q-3B5qUZln_7b-F_uDQ_upNgGChIpOE9FmQ.jpeg)`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-600/80" />
-        </div>
-        <div className="relative h-full flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-4">Our People</h1>
+      <div className="relative h-[250px] bg-gradient-to-r from-blue-900 to-blue-600">
+        <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
+        <div className="relative h-full flex items-center justify-start">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-white">
+              <Users className="w-16 h-16 mb-4" />
+              <h1 className="text-4xl font-bold mb-4">{typewriterText}</h1>
+              <p className="text-xl max-w-2xl">Meet the dedicated team behind our success</p>
+            </div>
+          </div>
         </div>
       </div>
 

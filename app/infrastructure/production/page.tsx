@@ -17,15 +17,14 @@ export default function ProductionPage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[400px]">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-600">
-          <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
-        </div>
-        <div className="relative h-full flex items-center">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative h-[250px] bg-gradient-to-r from-blue-900 to-blue-600">
+        <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
+        <div className="relative h-full flex items-center justify-start">
+          <div className="container px-4 sm:px-6 lg:px-8">
             <div className="text-white">
               <Factory className="w-16 h-16 mb-4" />
-              <h1 className="text-4xl font-bold">{typewriterText}</h1>
+              <h1 className="text-4xl font-bold mb-4">{typewriterText}</h1>
+              <p className="text-xl max-w-2xl">Advanced manufacturing facilities with modern machinery and equipment</p>
             </div>
           </div>
         </div>

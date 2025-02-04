@@ -1,6 +1,9 @@
+"use client"
+
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Award } from "lucide-react"
+import { useTypewriter } from "../../hooks/useTypewriter"
 
 const certifications = [
   {
@@ -17,13 +20,21 @@ const certifications = [
 ]
 
 export default function CertificationsPage() {
+  const typewriterText = useTypewriter("Our Certifications", 50)
+
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[200px] md:h-[300px] lg:h-[400px]">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-600" />
-        <div className="relative h-full flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-4">Our Certifications</h1>
+      <div className="relative h-[250px] bg-gradient-to-r from-blue-900 to-blue-600">
+        <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
+        <div className="relative h-full flex items-center justify-start">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-white">
+              <Award className="w-16 h-16 mb-4" />
+              <h1 className="text-4xl font-bold mb-4">{typewriterText}</h1>
+              <p className="text-xl max-w-2xl">Industry standards and quality certifications</p>
+            </div>
+          </div>
         </div>
       </div>
 

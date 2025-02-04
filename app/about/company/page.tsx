@@ -27,7 +27,7 @@ export default function CompanyPage() {
           <p className="text-slate-700 mb-6">
             Sudeep Polymers Pvt. Ltd. (formally a partnership firm) was founded by Late Mr. R.M.Agarwal in 1986 with a
             vision to create a company, manufacturing Precise Auto Ancillary Parts. Mr. Deepak Agarwal joined the
-            company in 2009 as Director, Marketing & Development, after completing his Bachelor&apos;s in Mechanical &
+            company in 2009 as Director, Marketing & Development, after completing his Bachelor's in Mechanical &
             serving in engineering industry for a period of 2 years. Under his Leadership company has expanded its
             facilities & Customer base, there by achieving CAGR of 30%.
           </p>

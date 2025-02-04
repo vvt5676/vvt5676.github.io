@@ -19,7 +19,7 @@ interface ImageSliderProps {
   height: number
 }
 
-export function ImageSlider({ images }: ImageSliderProps) {
+export function ImageSlider({ images, width, height }: ImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
 
@@ -65,7 +65,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
             className={`object-cover absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
               index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            sizes="(max-width: 768px) 100vw, 1200px) 50vw, 33vw"
             priority={index === 0}
           />
         ))}

@@ -8,11 +8,11 @@ import { Users } from "lucide-react"
 const initiatives = [
   {
     title: "Education Support",
-    description: "Providing resources and support to local schools and educational institutions.",
+    description: "Providing resources and support to local schools educational institutions.",
   },
   {
     title: "Environmental Conservation",
-    description: "Participating in and organizing local environmental cleanup and conservation efforts.",
+    description: "Participating in and organizing local environmental cleanup conservation efforts.",
   },
   {
     title: "Skill Development",

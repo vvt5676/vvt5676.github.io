@@ -45,7 +45,7 @@ export default function BloodDonationPage() {
             <h2 className="text-3xl font-bold text-blue-900 mb-4">Saving Lives Together</h2>
             <p className="text-lg text-gray-700 mb-4">
               Our regular blood donation drives are a crucial part of our commitment to community health. We believe
-              that every drop counts and can make a significant difference in someone's life.
+              that every drop counts and can make a significant difference in someone&apos;s life.
             </p>
             <p className="text-lg text-gray-700">
               We organize these drives in collaboration with local hospitals and blood banks, encouraging our employees

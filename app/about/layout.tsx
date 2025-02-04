@@ -3,6 +3,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import type { ReactNode } from "react"
 
+
 const sidebarNavItems = [
   { name: "The Company", href: "/about/company" },
   { name: "Our People", href: "/about/people" },

@@ -18,7 +18,7 @@ export default function AnnualDayPage() {
             <div className="text-white">
               <Calendar className="w-16 h-16 mb-4" />
               <h1 className="text-4xl font-bold mb-4">{typewriterText}</h1>
-              <p className="text-xl max-w-2xl">Recognizing and celebrating our team's achievements</p>
+              <p className="text-xl max-w-2xl">Recognizing and celebrating our team&apos;s achievements</p>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function AnnualDayPage() {
             <h2 className="text-3xl font-bold text-blue-900 mb-4">Celebrating Our Achievements</h2>
             <p className="text-lg text-gray-700 mb-4">
               Every year, we come together to celebrate our collective achievements and recognize the hard work of our
-              employees. Our Annual Day is a testament to our company's growth and the dedication of our team.
+              employees. Our Annual Day is a testament to our company&apos;s growth and the dedication of our team.
             </p>
             <p className="text-lg text-gray-700">
               The event features award ceremonies, cultural performances, and team-building activities, fostering a

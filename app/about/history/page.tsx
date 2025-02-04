@@ -41,7 +41,7 @@ export default function HistoryPage() {
       {/* Timeline Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-8">
-          {timeline.map((event, index) => (
+          {timeline.map((event) => (
             <Card key={event.year} className="overflow-hidden">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">

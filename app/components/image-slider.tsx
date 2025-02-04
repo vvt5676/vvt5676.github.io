@@ -19,7 +19,7 @@ interface ImageSliderProps {
   height: number
 }
 
-export function ImageSlider({ images, width, height }: ImageSliderProps) {
+export function ImageSlider({ images }: ImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(true)
 

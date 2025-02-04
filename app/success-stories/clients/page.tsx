@@ -1,7 +1,9 @@
+"use client"
+
 import Image from "next/image"
 import { Building } from "lucide-react"
-import { useTypewriter } from "../../hooks/useTypewriter"
 import { Card, CardContent } from "@/components/ui/card"
+import { useTypewriter } from "../../hooks/useTypewriter"
 
 const clients = [
   { name: "Polybond", logo: "/placeholder.svg?height=200&width=200&text=Polybond" },
@@ -20,16 +22,9 @@ export default function ClientsPage() {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[400px]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(https://sjc.microlink.io/47JUvwYhNGXvdZJOlwWTC1-jiPfkL_QcxqH9p-yo0e788vffu2dBjddpRWFS_wigGj-cjscpj3fbnTjAJKxuBw.jpeg)`,
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-600/80" />
-        </div>
-        <div className="relative h-full flex items-center">
+      <div className="relative h-[250px] bg-gradient-to-r from-blue-900 to-blue-600">
+        <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
+        <div className="relative h-full flex items-center justify-start">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-white">
               <Building className="w-16 h-16 mb-4" />

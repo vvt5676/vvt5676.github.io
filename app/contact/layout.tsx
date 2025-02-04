@@ -3,13 +3,9 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import type React from "react"
 
-const sidebarNavItems = [
-  { name: "Tooling", href: "/infrastructure/tooling" },
-  { name: "Inspection & Training", href: "/infrastructure/inspection-training" },
-  { name: "Production", href: "/infrastructure/production" },
-]
+const sidebarNavItems = [{ name: "Contact Us", href: "/contact" }]
 
-export default function InfrastructureLayout({
+export default function ContactLayout({
   children,
 }: {
   children: React.ReactNode
@@ -21,7 +17,7 @@ export default function InfrastructureLayout({
         {/* Side Navigation */}
         <div className="w-64 min-h-[calc(100vh-5rem)] bg-white border-r">
           <div className="p-6">
-            <h2 className="text-xl font-semibold text-blue-900 mb-4">Infrastructure</h2>
+            <h2 className="text-xl font-semibold text-blue-900 mb-4">Contact Us</h2>
             <SidebarNav items={sidebarNavItems} />
           </div>
         </div>

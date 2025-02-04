@@ -1,3 +1,5 @@
+"use client"
+
 import { useTypewriter } from "../../hooks/useTypewriter"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
@@ -7,13 +9,11 @@ export default function BloodDonationPage() {
   const typewriterText = useTypewriter("Blood Donation Drive", 50)
 
   return (
-    <div className="min-h-screen bg-white">
+    <div>
       {/* Hero Section */}
-      <div className="relative h-[400px]">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-600">
-          <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
-        </div>
-        <div className="relative h-full flex items-center">
+      <div className="relative h-[250px] bg-gradient-to-r from-blue-900 to-blue-600">
+        <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
+        <div className="relative h-full flex items-center justify-start">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-white">
               <Heart className="w-16 h-16 mb-4" />

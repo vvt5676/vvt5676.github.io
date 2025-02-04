@@ -1,11 +1,28 @@
-import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import { Building } from "lucide-react"
+import { useTypewriter } from "../../hooks/useTypewriter"
 
 export default function CompanyPage() {
+  const typewriterText = useTypewriter("The Company", 50)
+
   return (
-    <div className="py-12 px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-blue-900 mb-8">The Company</h2>
+    <div>
+      {/* Hero Section */}
+      <div className="relative h-[250px] bg-gradient-to-r from-blue-900 to-blue-600">
+        <div className="absolute inset-0 opacity-10 bg-grid-white/[0.2]" />
+        <div className="relative h-full flex items-center justify-start">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-white">
+              <Building className="w-16 h-16 mb-4" />
+              <h1 className="text-4xl font-bold mb-4">{typewriterText}</h1>
+              <p className="text-xl max-w-2xl">Learn about our history, vision, and values</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="prose prose-lg max-w-none">
           <p className="text-slate-700 mb-6">
             Sudeep Polymers Pvt. Ltd. (formally a partnership firm) was founded by Late Mr. R.M.Agarwal in 1986 with a
@@ -38,27 +55,6 @@ export default function CompanyPage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </div>
-
-      {/* Values Section */}
-      <div className="bg-gray-50 py-12 mt-12 -mx-6 lg:-mx-8">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Our Core Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Quality", description: "Commitment to excellence in every product" },
-              { title: "Innovation", description: "Continuously improving our processes and technologies" },
-              { title: "Integrity", description: "Honesty and transparency in all our dealings" },
-            ].map((value, index) => (
-              <Card key={index}>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-blue-900 mb-2">{value.title}</h3>
-                  <p className="text-slate-600">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </div>
